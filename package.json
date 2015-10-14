@@ -1,0 +1,19 @@
+{
+  "name": "score11-rest",
+  "version": "0.0.1",
+  "description": "The Score11 REST interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Score11/score11-rest.git"
+  },
+  "author": "Dominik Jungowski, Alexander Ermer, Christopher Schreiner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Score11/score11-rest/issues"
+  },
+  "homepage": "https://github.com/Score11/score11-rest#readme"
+}
