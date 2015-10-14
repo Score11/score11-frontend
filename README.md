@@ -3,11 +3,11 @@ score11-rest
 
 REST interface for Score11
 
-# Prerequisites
+## Prerequisites
 node.js 4.2.1
 
-# Setup
+## Setup
 
-## Install dependencies
+### Install dependencies
 
 	npm install
