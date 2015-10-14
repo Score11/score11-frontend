@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Score11/score11-rest/issues"
   },
-  "homepage": "https://github.com/Score11/score11-rest#readme"
+  "homepage": "https://github.com/Score11/score11-rest#readme",
+  "dependencies": {
+    "mysql": "^2.9.0"
+  },
+  "devDependencies": {
+    "jsonschema": "^1.0.2",
+    "supertest": "^1.1.0"
+  }
 }
