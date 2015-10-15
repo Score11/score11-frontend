@@ -4,14 +4,12 @@ var request = require('supertest');
 
 describe('Returns 404 by default', function() {
 
-	var server = null;
-
 	beforeEach(function() {
-	    server = request(app);
+	    this.server = request(app);
 	});
 
 	it('returns 404', function(done) {
-		server
+		this.server
 			.get('/foobar')
 			.expect(404, done);
 	});
