@@ -20,6 +20,8 @@
   "dependencies": {
     "express": "^4.13.3",
     "iniparser": "^1.0.5",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
     "mysql": "^2.9.0"
   },
   "devDependencies": {
