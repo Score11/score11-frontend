@@ -2,7 +2,7 @@ var assert = require('assert');
 var app = require('../../app.js');
 var request = require('supertest');
 
-describe('Foo', function() {
+describe('Returns 404 by default', function() {
 
 	var server = null;
 
