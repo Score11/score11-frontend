@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "node_modules/mocha/bin/mocha"
+    "test": "PORT=42424 node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Score11/score11-rest#readme",
   "dependencies": {
     "express": "^4.13.3",
+    "iniparser": "^1.0.5",
     "mysql": "^2.9.0"
   },
   "devDependencies": {
