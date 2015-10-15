@@ -13,4 +13,8 @@ describe(apiRoute + ' integration test', function() {
 	it('returns 200', function(done) {
 	    this.server.get(apiRoute).expect(200, done);
 	});
+
+	it('returns application/json header', function (done) {
+		this.server.get(apiRoute).expect('Content-Type', 'application/json; charset=utf-8').end(done);
+	})
 });
