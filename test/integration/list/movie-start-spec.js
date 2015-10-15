@@ -4,7 +4,7 @@ var request = require('supertest');
 var jsonSchemaValidator = require('jsonschema').Validator;
 var jsonValidator = new jsonSchemaValidator();
 
-var apiRoute = '/list/moviestart';
+var apiRoute = '/list/moviedvd';
 
 var rootListSchema = {
 	id: '/RootListSchema',
