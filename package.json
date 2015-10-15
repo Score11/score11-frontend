@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Score11/score11-rest#readme",
   "dependencies": {
     "express": "^4.13.3",
+    "iniparser": "^1.0.5",
     "mysql": "^2.9.0"
   },
   "devDependencies": {
