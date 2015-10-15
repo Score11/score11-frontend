@@ -4,6 +4,7 @@
   "description": "The Score11 REST interface",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "node_modules/mocha/bin/mocha"
   },
   "repository": {
