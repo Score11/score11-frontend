@@ -1,4 +1,4 @@
-var assert = require('assert');
+var expect = require('chai').expect;
 var app = require('../../../app.js');
 var request = require('supertest');
 var jsonSchemaValidator = require('jsonschema').Validator;
@@ -8,6 +8,14 @@ var apiRoute = '/list/moviedvd';
 
 var rootListSchema = {
 	id: '/RootListSchema',
+	properties: {
+		movies: '/ListSchema'
+	},
+	required: ['movies', 'total']
+};
+
+var listSchema = {
+	id: '/ListSchema',
 	type: 'array',
 	items: '/ListReleaseSchema'
 };
@@ -52,6 +60,7 @@ var titleItemsSchema = {
 };
 
 jsonValidator.addSchema(rootListSchema);
+jsonValidator.addSchema(listSchema);
 jsonValidator.addSchema(listReleaseSchema);
 jsonValidator.addSchema(titleSchema);
 jsonValidator.addSchema(titleItemsSchema);
@@ -74,7 +83,7 @@ describe(apiRoute + ' integration test', function() {
 		this.server.get(apiRoute).expect(200, function (error, response) {
 			var validationResult = jsonValidator.validate(response.body, '/RootListSchema');
 			validationResult.errors.forEach(function (error) {
-				assert.equal(error.property, error.message + ' (Schema: ' + error.schema + ')');
+				expect(error.message + ' (Schema: ' + error.schema + ')').to.equal(error.property);
 			});
 			done();
 		})
