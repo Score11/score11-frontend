@@ -1,4 +1,4 @@
-var assert = require('assert');
+var expect = require('chai').expect;
 var app = require('../../../app.js');
 var request = require('supertest');
 var jsonSchemaValidator = require('jsonschema').Validator;
@@ -83,7 +83,7 @@ describe(apiRoute + ' integration test', function() {
 		this.server.get(apiRoute).expect(200, function (error, response) {
 			var validationResult = jsonValidator.validate(response.body, '/RootListSchema');
 			validationResult.errors.forEach(function (error) {
-				assert.equal(error.property, error.message + ' (Schema: ' + error.schema + ')');
+				expect(error.message + ' (Schema: ' + error.schema + ')').to.equal(error.property);
 			});
 			done();
 		})
