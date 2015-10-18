@@ -8,6 +8,14 @@ var apiRoute = '/list/moviedvd';
 
 var rootListSchema = {
 	id: '/RootListSchema',
+	properties: {
+		movies: '/ListSchema'
+	},
+	required: ['movies', 'total']
+};
+
+var listSchema = {
+	id: '/ListSchema',
 	type: 'array',
 	items: '/ListReleaseSchema'
 };
@@ -52,6 +60,7 @@ var titleItemsSchema = {
 };
 
 jsonValidator.addSchema(rootListSchema);
+jsonValidator.addSchema(listSchema);
 jsonValidator.addSchema(listReleaseSchema);
 jsonValidator.addSchema(titleSchema);
 jsonValidator.addSchema(titleItemsSchema);
